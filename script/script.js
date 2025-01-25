@@ -63,9 +63,9 @@ console.log("gender",gender);
   
 
 
-  // Display result
+  
   document.getElementById(
     "result"
-  ).text.Content = `Your Akan name is ${akanName}`;
+  ).textContent = `Your Akan name is ${akanName}`;
 }
 
