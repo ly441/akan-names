@@ -123,8 +123,10 @@ button:hover {
   border: 2px solid #f4a261;
   border-radius: 10px;
   background: #fefae0;
-  display: none; 
+
+  display: block !important; /* Temporarily force it visible */
 }
+
   
     
 
