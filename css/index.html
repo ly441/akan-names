@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akan Name Finder</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div id="form-container">
+        <h1>Akan Name Finder</h1>
+        <p>This app calculates your Akan name based on your birthdate and gender.</p>
+
+        <form id="akan-form">
+            <label for="birthday">Enter your birthdate:</label>
+
+            <input type="number" id="year" required max="2025" min="1990">year
+            <input type="number" id="month" required max="12" min="1"> month
+            <input type="number" id="day" required max="7" min="1">day
+            
+        <div>
+                <label>Choose your gender:</label>
+
+                <label for="male">Male</label>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="female">Female</label>
+                <input type="radio" id="female" name="gender" value="female">
+            </div>
+            
+
+            <button type="button" onclick="displayAkanName()">Submit</button>
+        </form>
+
+    <section id="result" class="mt-8 bg-green-100 text-green-700 font-bold text-xl p-4 rounded-lg shadow-md"></section>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
