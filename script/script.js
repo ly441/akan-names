@@ -60,5 +60,6 @@ document.getElementById("akan-form").addEventListener("submit", function (e) {
     "result"
   );resultDiv.textContent = `Your Akan name is ${akanName}`;
    resultDiv.style.display = "block";
+   console.log("Result Div Display Style Set to Block");
 
 });
