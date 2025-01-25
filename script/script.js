@@ -1,71 +1,62 @@
-function getDayOfWeek(date) {
-  let CC = Math.floor(date.getFullYear() / 100);
-  let YY = date.getFullYear() % 100;
-  let MM = date.getMonth() + 1;
+document.getElementById("akan-form").addEventListener("submit", function (e) {
+  e.preventDefault();
 
-  let DD = date.getDate();
-
-  let day = Math.floor(
-    (CC / 4 - 2 * CC - 1 + (5 * YY) / 4 + (26 * (MM + 1)) / 10 + DD) % 7
-  );
-  return day;
-}
-
-const maleNames = [
-  "Kwasi",
-  "Kwadwo",
-  "Kwabena",
-  "Kwaku",
-  "Yaw",
-  "Kofi",
-  "Kwame",
-];
-const femaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
-
-function getAkanName(dayOfWeek, gender) {
-  if (gender === "male") {
-    return maleNames[dayOfWeek];
-  } else if (gender === "female") {
-    return femaleNames[dayOfWeek];
-  } else {
-    return "Please select a gender.";
-  }
-}
-
-function displayAkanName() {
-  const birthdayInput = document.getElementById("birthday").value;
+  const year = parseInt(document.getElementById("year").value);
+  const month = parseInt(document.getElementById("month").value);
+  const day = parseInt(document.getElementById("day").value);
   const gender = document.querySelector('input[name="gender"]:checked')?.value;
-console.log("birthday",birthday);
-console.log("gender",gender);
-  document
-    .getElementById("form-container")
-    .addEventListener("submit", function (event) {
-      // Process your form here
-    });
 
-  eventpreventDefault();
-
-
-  // Validate date input
-  if (!birthdayInput) {
-    alert("Please enter a valid birthdate.");
+  if (!year || !month || !day || !gender) {
+    alert("Please fill out all fields correctly.");
     return;
   }
 
-  if (!gender) {
-    alert("Please select a gender.");
+  if (month < 1 || month > 12 || day < 1 || day > 31) {
+    alert("Invalid date. Please check your inputs.");
     return;
   }
 
-  const date = new Date(birthdayInput);
-  const dayOfWeek = getDayOfWeek(date);
-  const akanName = getAkanName(dayOfWeek, gender.value);
-  
+  let adjustedMonth = month;
+  let adjustedYear = year;
+  if (month === 1 || month === 2) {
+    adjustedMonth += 12;
+    adjustedYear -= 1;
+  }
 
+  const K = adjustedYear % 100;
+  const J = Math.floor(adjustedYear / 100);
+  const h =
+    (day +
+      Math.floor((13 * (adjustedMonth + 1)) / 5) +
+      K +
+      Math.floor(K / 4) +
+      Math.floor(J / 4) -
+      2 * J) %
+    7;
+  const dayOfWeek = (h + 7) % 7;
 
-  
+  const maleNames = [
+    "Kwame",
+    "Kwasi",
+    "Kwadwo",
+    "Kwabena",
+    "Kwaku",
+    "Yaw",
+    "Kofi",
+  ];
+  const femaleNames = [
+    "Ama",
+    "Akosua",
+    "Adwoa",
+    "Abenaa",
+    "Akua",
+    "Yaa",
+    "Afua",
+  ];
+  const akanName =
+    gender === "male" ? maleNames[dayOfWeek] : femaleNames[dayOfWeek];
+
   document.getElementById(
     "result"
   ).textContent = `Your Akan name is ${akanName}`;
-}
-
+});

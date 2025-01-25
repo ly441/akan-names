@@ -1,48 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akan Name Finder</title>
-    
-    <link rel="stylesheet" href="./css/style.css"/>
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akan Name Finder</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
-    <img src="/images/_ (9).jpeg" alt="" width="1000" height="">
+  <header>
+    <h1>Akan Name Finder</h1>
+    <p>Discover your Akan name based on your birthdate and gender!</p>
+  </header>
 
-    <div id="form-container">
-        <h1>Akan Name Finder</h1>
-        <p>calculates your Akan name based on your birthdate and gender.</p>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-        <form id="birthday">
-            <label for="birthday">Enter your birthdate:</label>
+  <form id="akan-form">
+    <label for="year">Enter Your Birth Year:</label>
+    <input type="number" id="year" min="1990" max="2025" required>
 
-            <input type="number" id="year" required max="2025" min="1990">year
-            <input type="number" id="month" required max="12" min="1"> month
-            <input type="number" id="day" required max="7" min="1">day
-            
-        <div>
-                <label>Choose your gender:</label>
+    <label for="month">Enter Your Birth Month:</label>
+    <input type="number" id="month" min="1" max="12" required>
 
-                <label for="male">Male</label>
-                <input type="radio" id="male" name="gender" value="male" required>
-                <label for="female">Female</label>
-                <input type="radio" id="female" name="gender" value="female">
-            </div>
-            
+    <label for="day">Enter Your Birth Day:</label>
+    <input type="number" id="day" min="1" max="7">
+    <div class="gender-options">
+      <label>Select Your Gender:</label>
+      <input type="radio" name="gender" value="male" required> Male
+      <input type="radio" name="gender" value="female" required> Female
+    </div>
 
-            <button type="button" onclick="displayAkanName()">Submit</button>
-        </form>
+    <button type="submit">Find My Akan Name</button>
+  </form>
 
-    <div id="result"></div>
+  <div id="result"></div>
 
+  <footer>
+    <p>&copy; 2025 Akan Name Finder. All rights reserved.</p>
+  </footer>
 
-
-    
-    
+  <script src="script.js"></script>
 </body>
- <script src="./script/script.js"></script>
 </html>
+
