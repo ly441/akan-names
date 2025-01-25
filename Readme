@@ -1,0 +1,61 @@
+# Akan Name Finder
+Project Description
+The Akan Name Finder is a web application that calculates your Akan name based on your birthdate and gender. Akan names are derived from Ghanaian culture, where children are often named based on the day of the week they were born. This app provides users with a fun and interactive way to discover their unique Akan name.
+
+## Features
+Input your birthdate: year, month, and day.
+Select your gender: male or female.
+Display the corresponding Akan name based on the entered data.
+Alerts users for invalid inputs (e.g., invalid dates or missing gender selection).
+How It Works
+Users enter their birthdate and gender.
+The app calculates the day of the week using Zeller's Congruence.
+The Akan name is determined based on the day of the week and the selected gender.
+The Akan name is displayed dynamically on the screen.
+### Technologies Used
+HTML5: Structure and layout of the application.
+CSS3: Styling for a visually appealing user interface.
+JavaScript: Logic for calculations and dynamic interactions.
+
+#### Setup Instructions
+# Akan Name Finder
+Project Description
+The Akan Name Finder is a web application that calculates your Akan name based on your birthdate and gender. Akan names are derived from Ghanaian culture, where children are often named based on the day of the week they were born. This app provides users with a fun and interactive way to discover their unique Akan name.
+
+## Features
+Input your birthdate: year, month, and day.
+Select your gender: male or female.
+Display the corresponding Akan name based on the entered data.
+Alerts users for invalid inputs (e.g., invalid dates or missing gender selection).
+How It Works
+Users enter their birthdate and gender.
+The app calculates the day of the week using Zeller's Congruence.
+The Akan name is determined based on the day of the week and the selected gender.
+The Akan name is displayed dynamically on the screen.
+### Technologies Used
+HTML5: Structure and layout of the application.
+CSS3: Styling for a visually appealing user interface.
+JavaScript: Logic for calculations and dynamic interactions.
+#### Setup Instructions
+
+
+
+
+##### Business Development Document (BDD)
+Behavior	Input Example	Expected Output
+Input birthdate and gender	Year: 1995, Month: 8, Day: 15, Male	"Your Akan name is Kwabena"
+Input invalid day	Year: 1995, Month: 8, Day: 35	Alert: "Invalid date. Please check your inputs."
+No gender selected	Year: 1995, Month: 8, Day: 15	Alert: "Please fill out all fields correctly."
+
+###### Author(s)
+Your Name
+Email: koliilynn@gmail.com
+GitHub: ly441
+
+License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+
+
+
+
