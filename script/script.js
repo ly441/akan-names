@@ -39,12 +39,12 @@ console.log("birthday",birthday);
 console.log("gender",gender);
   document
     .getElementById("form-container")
-    .addEventListener("submit", function () {
+    .addEventListener("submit", function (event) {
       // Process your form here
     });
 
   eventpreventDefault();
-  console.log("form submitted");
+
 
   // Validate date input
   if (!birthdayInput) {
