@@ -34,6 +34,8 @@ document.getElementById("akan-form").addEventListener("submit", function (e) {
       2 * J) %
     7;
   const dayOfWeek = (h + 7) % 7;
+  console.log("Day of Week (0=Saturday, 1=Sunday, ...):", dayOfWeek);
+
 
   const maleNames = [
     "Kwame",
@@ -56,10 +58,9 @@ document.getElementById("akan-form").addEventListener("submit", function (e) {
   const akanName =
     gender === "male" ? maleNames[dayOfWeek] : femaleNames[dayOfWeek];
 
-  document.getElementById(
-    "result"
-  );resultDiv.textContent = `Your Akan name is ${akanName}`;
-   resultDiv.style.display = "block";
-   console.log("Result Div Display Style Set to Block");
+  const resultDiv = document.getElementById("result");
+    resultDiv.textContent = `Your Akan name is ${akanName}`;
 
+  
+  
 });
