@@ -33,7 +33,7 @@ function getAkanName(dayOfWeek, gender) {
 }
 
 function displayAkanName() {
-  const dobInput = document.getElementById("birthday").value;
+  const birthdayInput = document.getElementById("birthday").value;
   const gender = document.querySelector('input[name="gender"]:checked')?.value;
 console.log("birthday",birthday);
 console.log("gender",gender);
