@@ -58,5 +58,7 @@ document.getElementById("akan-form").addEventListener("submit", function (e) {
 
   document.getElementById(
     "result"
-  ).textContent = `Your Akan name is ${akanName}`;
+  );resultDiv.textContent = `Your Akan name is ${akanName}`;
+   resultDiv.style.display = "block";
+
 });
