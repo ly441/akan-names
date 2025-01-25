@@ -6,6 +6,12 @@ document.getElementById("akan-form").addEventListener("submit", function (e) {
   const day = parseInt(document.getElementById("day").value);
   const gender = document.querySelector('input[name="gender"]:checked')?.value;
 
+  console.log("Year:", year);
+  console.log("Month:", month);
+  console.log("Day:", day);
+  console.log("Gender:", gender);
+
+
   if (!year || !month || !day || !gender) {
     alert("Please fill out all fields correctly.");
     return;
@@ -15,6 +21,7 @@ document.getElementById("akan-form").addEventListener("submit", function (e) {
     alert("Invalid date. Please check your inputs.");
     return;
   }
+
 
   let adjustedMonth = month;
   let adjustedYear = year;
