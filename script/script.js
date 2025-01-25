@@ -38,8 +38,8 @@ function displayAkanName() {
 console.log("birthday",birthday);
 console.log("gender",gender);
   document
-    .getElementById("submitButton")
-    .addEventListener("click", function () {
+    .getElementById("form-container")
+    .addEventListener("submit", function () {
       // Process your form here
     });
 
@@ -60,6 +60,8 @@ console.log("gender",gender);
   const date = new Date(birthdayInput);
   const dayOfWeek = getDayOfWeek(date);
   const akanName = getAkanName(dayOfWeek, gender.value);
+  
+
 
   // Display result
   document.getElementById(
