@@ -27,11 +27,16 @@
 
     <label for="day">Enter Your Birth Day:</label>
     <input type="number" id="day" min="1" max="7" required>
-    <div class="gender-options">
-      <label>Select Your Gender:</label>
-      <input type="radio" name="gender" value="male" required> Male
-      <input type="radio" name="gender" value="female" required> Female
-    </div>
+
+    <label>Gender:</label>
+    
+  <div class="gender-options">
+    <label for="male">Male</label>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="female">Female</label>
+    <input type="radio" id="female" name="gender" value="female">
+  </div>
+    
 
     <button type="submit">Find My Akan Name</button>
   </form>
